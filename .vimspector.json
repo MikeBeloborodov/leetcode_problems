@@ -1,0 +1,28 @@
+{
+  "configurations": {
+    "<name>: Launch": {
+      "adapter": "debugpy",
+      "filetypes": [ "python" ],
+      "configuration": {
+        "name": "<name>: Launch",
+        "type": "python",
+        "request": "launch",
+        "cwd": "<working directory>",
+        "python": "usr/bin/python3.10",
+        "stopOnEntry": true,
+        "console": "externalTerminal",
+        "debugOptions": [],
+        "program": "${file}"
+      }
+    },
+    "Python: Run current script": {
+      "adapter": "debugpy",
+      "configuration": {
+        "request": "launch",
+        "program": "${file}",
+        "args": [ "*${args:--update-gadget-config}" ],
+        "justMyCode#json": "${justMyCode:true}"
+      }
+    }
+  }
+}
